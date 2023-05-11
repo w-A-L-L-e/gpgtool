@@ -18,10 +18,10 @@ Menu:
 =====
 1. List GPG keys
 2. Create a new GPG key
-3. Show the public key block for a GPG key
+3. Show the public GPG key for sharing
 4. Delete a GPG key
-5. Encrypt a file to share using someone elses public key
-6. Encrypt a file with own keys
+5. Encrypt a file using public GPG key of someone else
+6. Encrypt a file
 7. Decrypt a file
 q. Exit
 
@@ -65,10 +65,10 @@ Menu:
 =====
 1. List GPG keys
 2. Create a new GPG key
-3. Show the public key block for a GPG key
+3. Show the public GPG key for sharing
 4. Delete a GPG key
-5. Encrypt a file to share using someone elses public key
-6. Encrypt a file with own keys
+5. Encrypt a file using public GPG key of someone else
+6. Encrypt a file
 7. Decrypt a file
 q. Exit
 
@@ -116,10 +116,10 @@ Menu:
 =====
 1. List GPG keys
 2. Create a new GPG key
-3. Show the public key block for a GPG key
+3. Show the public GPG key for sharing
 4. Delete a GPG key
-5. Encrypt a file to share using someone elses public key
-6. Encrypt a file with own keys
+5. Encrypt a file using public GPG key of someone else
+6. Encrypt a file
 7. Decrypt a file
 q. Exit
 
@@ -158,10 +158,10 @@ Menu:
 =====
 1. List GPG keys
 2. Create a new GPG key
-3. Show the public key block for a GPG key
+3. Show the public GPG key for sharing
 4. Delete a GPG key
-5. Encrypt a file to share using someone elses public key
-6. Encrypt a file with own keys
+5. Encrypt a file using public GPG key of someone else
+6. Encrypt a file
 7. Decrypt a file
 q. Exit
 
@@ -194,10 +194,10 @@ Menu:
 =====
 1. List GPG keys
 2. Create a new GPG key
-3. Show the public key block for a GPG key
+3. Show the public GPG key for sharing
 4. Delete a GPG key
-5. Encrypt a file to share using someone elses public key
-6. Encrypt a file with own keys
+5. Encrypt a file using public GPG key of someone else
+6. Encrypt a file
 7. Decrypt a file
 q. Exit
 

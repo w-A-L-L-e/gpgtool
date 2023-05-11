@@ -262,10 +262,10 @@ while True:
     print("=====")
     print("1. List GPG keys")
     print("2. Create a new GPG key")
-    print("3. Show the public key block for a GPG key")
+    print("3. Show the public GPG key for sharing")
     print("4. Delete a GPG key")
-    print("5. Encrypt a file to share using someone elses public key")
-    print("6. Encrypt a file with own keys")
+    print("5. Encrypt a file using public GPG key of someone else")
+    print("6. Encrypt a file")
     print("7. Decrypt a file")
     print("q. Exit\n")
 
