@@ -6,14 +6,14 @@
 #   gpgtool.py
 #   
 #   Chatgpt did most of the typing. Then I refactored + fixed bugs myself.
-# 
+#   Just do brew install gnupg. And then run python gpgtool.py. No pip packages required ;)
 #
 
 import subprocess
 import curses
 import os
 import base64
-
+import tempfile
 
 def select_file(prompt):
     current_dir = os.getcwd()
@@ -195,6 +195,43 @@ def encrypt_file():
         print("File encryption failed:", str(e))
 
 
+def read_multiple_lines():
+    lines = []
+    while True:
+        line = input()
+        lines.append(line)
+        if line.strip() == '-----END PGP PUBLIC KEY BLOCK-----':
+            break
+
+    return lines
+
+
+def encrypt_file_to_share():
+    print("Paste the public key of the recipient (including headers and footers):")
+    public_key = read_multiple_lines()  # Use the read_multiple_lines function to read multiple lines
+    
+    # file_path = input("Enter the path of the file to encrypt: ")
+    file_path = select_file("Select a file to encrypt:")
+    output_file = input("Enter the path to save the encrypted file: ")
+
+    try:
+        # Create a temporary file
+        with tempfile.NamedTemporaryFile(delete=False) as key_file:
+            # Join the lines into a single string
+            key_content = '\n'.join(public_key)
+            key_file.write(key_content.encode('utf-8'))
+
+        # Use the temporary key file in the encryption command
+        run_gpg_command(['--encrypt', '--recipient-file', key_file.name, '--output', output_file, file_path])
+
+        # Remove the temporary key file
+        os.remove(key_file.name)
+
+        print("File encrypted successfully.")
+    except RuntimeError as e:
+        print("File encryption failed:", str(e))
+
+
 def decrypt_file():
     keys = list_keys()
     index = 1
@@ -227,11 +264,12 @@ while True:
     print("2. Create a new GPG key")
     print("3. Show the public key block for a GPG key")
     print("4. Delete a GPG key")
-    print("5. Encrypt a file")
-    print("6. Decrypt a file")
+    print("5. Encrypt a file to share using someone elses public key")
+    print("6. Encrypt a file with own keys")
+    print("7. Decrypt a file")
     print("q. Exit")
 
-    choice = input("Enter your choice (0-6): ")
+    choice = input("Enter your choice (1-7): ")
 
     if choice == 'q':
         break
@@ -244,8 +282,10 @@ while True:
     elif choice == '4':
         delete_key()
     elif choice == '5':
-        encrypt_file()
+        encrypt_file_to_share() 
     elif choice == '6':
+        encrypt_file()
+    elif choice == '7':
         decrypt_file()
     else:
         print("Invalid choice. Please try again.")
