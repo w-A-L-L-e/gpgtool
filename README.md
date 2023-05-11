@@ -16,14 +16,15 @@ $ python gpgtool.py
 
 Menu:
 =====
-
 1. List GPG keys
 2. Create a new GPG key
 3. Show the public key block for a GPG key
 4. Delete a GPG key
-5. Encrypt a file
-6. Decrypt a file
+5. Encrypt a file to share using someone elses public key
+6. Encrypt a file with own keys
+7. Decrypt a file
 q. Exit
+
 Enter your choice (0-6): 3
 
 Available GPG keys:
@@ -62,14 +63,15 @@ $ python gpgtool.py
 
 Menu:
 =====
-
 1. List GPG keys
 2. Create a new GPG key
 3. Show the public key block for a GPG key
 4. Delete a GPG key
-5. Encrypt a file
-6. Decrypt a file
+5. Encrypt a file to share using someone elses public key
+6. Encrypt a file with own keys
+7. Decrypt a file
 q. Exit
+
 Enter your choice (0-6): 5
 
 Available GPG keys:
@@ -112,7 +114,6 @@ $ python gpgtool.py
 
 Menu:
 =====
-
 1. List GPG keys
 2. Create a new GPG key
 3. Show the public key block for a GPG key
@@ -121,6 +122,7 @@ Menu:
 6. Encrypt a file with own keys
 7. Decrypt a file
 q. Exit
+
 Enter your choice (1-7): 3
 
 Available GPG keys:
@@ -154,7 +156,6 @@ f/ixRWHwCNKasZEBjSsF
 
 Menu:
 =====
-
 1. List GPG keys
 2. Create a new GPG key
 3. Show the public key block for a GPG key
@@ -163,6 +164,7 @@ Menu:
 6. Encrypt a file with own keys
 7. Decrypt a file
 q. Exit
+
 Enter your choice (1-7): 5
 Paste the public key of the recipient (including headers and footers):
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -190,7 +192,6 @@ python gpgtool.py
 
 Menu:
 =====
-
 1. List GPG keys
 2. Create a new GPG key
 3. Show the public key block for a GPG key
@@ -199,6 +200,7 @@ Menu:
 6. Encrypt a file with own keys
 7. Decrypt a file
 q. Exit
+
 Enter your choice (1-7): 7
 
 Available GPG keys:
